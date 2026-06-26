@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.python/
+
+# Виртуальное окружение
+venv/
+env/
+.env
+.venv
+
+# Pytest
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Allure
+allure-results/
+
+# Selenium драйверы
+geckodriver.exe
+chromedriver.exe
+msedgedriver.exe
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Проектные файлы
+*.pyc
+*.pyo
