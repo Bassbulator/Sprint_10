@@ -15,6 +15,7 @@ env/
 .coverage
 .coverage.*
 htmlcov/
+pytest.ini
 
 # Allure
 allure-results/
