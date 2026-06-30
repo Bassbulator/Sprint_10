@@ -1,7 +1,7 @@
 import allure
 
-from pages.address_form import AddressForm
-from pages.transport_picker import TransportPicker
+from pages.address_form_page import AddressForm
+from pages.transport_picker_page import TransportPicker
 from test_data import TestData
 
 

@@ -1,12 +1,12 @@
 import allure
 import pytest
 
-from pages.address_form import AddressForm
-from pages.transport_picker import TransportPicker
-from pages.tariff_selector import TariffSelector
-from pages.searching_taxi import SearchingTaxi
-from pages.active_ride import ActiveRide
-from pages.ride_details import RideDetails
+from pages.address_form_page import AddressForm
+from pages.transport_picker_page import TransportPicker
+from pages.tariff_selector_page import TariffSelector
+from pages.searching_taxi_page import SearchingTaxi
+from pages.active_ride_page import ActiveRide
+from pages.ride_details_page import RideDetails
 from test_data import TestData
 
 
