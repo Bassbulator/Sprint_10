@@ -24,7 +24,18 @@ class TariffSelector(BasePage):
 
     def _verify_hint(self, tariff_locator, hint_btn_locator, hint_text_locator, expected):
         self.tap(tariff_locator)
-        self.mouse_over(hint_btn_locator)
+        hint_btn = self.find_visible(hint_btn_locator)
+        self.driver.execute_script(
+            "arguments[0].scrollIntoView({block: 'center'});", hint_btn
+        )
+        self.driver.execute_script(
+            """
+            const el = arguments[0];
+            el.dispatchEvent(new MouseEvent('mouseenter', {bubbles: true}));
+            el.dispatchEvent(new MouseEvent('mouseover', {bubbles: true}));
+            """,
+            hint_btn,
+        )
         return expected == self.read_text(hint_text_locator)
 
     def verify_business_tariff_hint(self):

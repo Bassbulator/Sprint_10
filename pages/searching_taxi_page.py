@@ -1,5 +1,7 @@
+from locators.active_ride_locators import ActiveRideLocators
 from locators.searching_taxi_locators import SearchingTaxiLocators
 from pages.base_page import BasePage
+from test_data import TestData
 
 
 class SearchingTaxi(BasePage):
@@ -8,7 +10,10 @@ class SearchingTaxi(BasePage):
         self.locators = SearchingTaxiLocators()
 
     def wait_search_complete(self):
-        self.wait_until_hidden(self.locators.SEARCHING_WINDOW)
+        self.wait.until(
+            lambda driver: TestData.CAR_ARRIVING_TITLE
+            in driver.find_element(*ActiveRideLocators.RIDE_PANEL_TITLE).text
+        )
 
     def dismiss_btn_visible(self):
         return self.element_exists(self.common.DISMISS_BTN)

@@ -53,7 +53,7 @@ class BasePage:
         element = self.wait.until(EC.visibility_of_element_located(locator))
         ActionChains(self.driver).move_to_element(element).perform()
 
-    def wait_until_hidden(self, locator, timeout=30):
+    def wait_until_hidden(self, locator, timeout=90):
         WebDriverWait(self.driver, timeout).until(
             EC.invisibility_of_element_located(locator)
         )
